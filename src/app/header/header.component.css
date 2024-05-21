@@ -1,0 +1,33 @@
+/* Estilo para el div con clase "cabecera" */
+html{
+    padding: 0px;
+    margin:0px;
+}
+
+.cabecera {
+  background-color: #312783; /* Color de fondo */
+  color: #fff; /* Color del texto */
+  padding-bottom:20px ;
+  padding-top:20px ;
+  font-size: 24px; /* Tamaño del texto */
+  text-align: center; /* Alineación del texto */
+  margin:0px;
+  width: 100vw;
+  height:5vh;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+}
+
+h2{
+    margin-left: 20px;
+
+}
+
+a{
+
+color: #fff;
+text-decoration: none;
+margin-right:10px;
+}

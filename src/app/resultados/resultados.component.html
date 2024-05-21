@@ -1,0 +1,10 @@
+<div class="container">
+    <h1>Aulas Disponibles</h1>
+    <ul>
+        <li *ngFor="let aula of centros.aula[0]">
+            <p>{{ aula.nombre }}</p>
+            <!-- Aquí puedes mostrar más detalles de cada aula si lo deseas -->
+            <button (click)="reservar(aula)">Reserva</button>
+        </li>
+    </ul>
+</div>

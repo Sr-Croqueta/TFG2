@@ -1,0 +1,20 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .app-item {
+    text-align: center;
+  }
+  
+  .app-logo {
+    width: 100px; /* Ajusta el tamaño según sea necesario */
+    height: 100px; /* Ajusta el tamaño según sea necesario */
+    margin-bottom: 10px;
+    border-radius: 13px;
+  }
+  
+  .app-name {
+    font-size: 16px;
+  }

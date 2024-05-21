@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans&family=Lexend+Deca:wght@200&display=swap');
+*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}
+
+    body{
+    margin:0;
+    font-family: 'Encode Sans', sans-serif;
+    }
+    a:visited{
+    color:white;
+   }
+   a:link{
+    color:white;
+   }
+   a{
+    text-decoration:none;
+    margin-right: 10px;
+   }
+   a:hover{
+    text-decoration: underline;
+    color: rgb(49, 189, 227);
+   }
+
+   form:hover button{
+    text-decoration: underline;
+    color: rgb(49, 189, 227);
+   }
+   .navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background-color:rgb(18, 18, 18);
+    color: white;
+    }
+    .navbar h1{
+     margin-left: 20px;
+    }
+    .navbar div{
+        margin-right: 20px;
+    }
+
+    .dropdown {
+        
+        position: relative;
+        display: inline-block;
+    }
+    .username{
+        margin-right: 30px;
+        margin-left: 80px;
+    }
+    .edit-perfil{
+        margin: 20px 10px 10px 10px;
+    }
+
+    .dropdown-content {
+        margin-left: 70px;
+        display: none;
+        position: absolute;
+        min-width: 100px;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        z-index: 1;
+        background-color: rgb(18, 18, 18);
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    .logout{
+        display: inline-block;
+        background-color: rgb(18, 18, 18);
+        border: none;
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 17px;
+        cursor: pointer;
+        margin: 5px;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .heading {
+        text-align: center;
+        margin: 30px 0 20px;
+        font-size: 28px;
+        color: #333; /* Color de texto oscuro */
+    }
+    
+    /* Botón para crear usuario */
+    .btn-create {
+        display: inline-block;
+        padding: 12px 24px;
+        margin-bottom: 20px;
+        font-size: 18px;
+        font-weight: bold;
+        text-decoration: none;
+        background-color: #007bff; /* Azul */
+        color: #fff; /* Texto blanco */
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    .btn-create:hover {
+        background-color: #0056b3; /* Azul más oscuro al pasar el ratón */
+    }
+    
+    /* Tabla de usuarios */
+    .table-users {
+        width: 70%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+    
+    .table-users th,
+    .table-users td {
+        padding: 12px;
+        border: 1px solid #ddd; /* Borde gris claro */
+    }
+    
+    .table-users th {
+        background-color: #f2f2f2; /* Fondo gris claro */
+        font-weight: bold;
+        color: #333; /* Color de texto oscuro */
+    }
+    
+    /* Botones de acción */
+    .btn-action {
+        display: inline-block;
+        padding: 8px 16px;
+        margin-right: 10px;
+        font-size: 16px;
+        font-weight: bold;
+        text-decoration: none;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    /* Estilos para el botón "Ver" */
+    .btn-primary {
+        background-color: #000143; /* Verde */
+        color: #fff; /* Texto blanco */
+    }
+    
+    .btn-primary:hover {
+        background-color: #020026; /* Verde más oscuro al pasar el ratón */
+    }
+    
+    /* Estilos para el botón "Editar" */
+    .btn-warning {
+        background-color: #0b0053; /* Amarillo */
+        color: #333; /* Texto oscuro */
+    }
+    
+    .btn-warning:hover {
+        background-color: #000431; /* Amarillo más oscuro al pasar el ratón */
+    }
+    
+    /* Estilos para el botón "Eliminar" */
+    .btn-danger {
+        background-color: #a52121; /* Rojo */
+        color: #fff; /* Texto blanco */
+    }
+    
+    .btn-danger:hover {
+        background-color: #c31a1a; /* Rojo más oscuro al pasar el ratón */
+    }
+    
+    /* Formulario para eliminar usuario */
+    .form-delete {
+        display: inline;
+    }

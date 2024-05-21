@@ -1,0 +1,80 @@
+*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}
+
+            body{
+            margin:0;
+            line-height:inherit;
+            font-family:Arial, sans-serif;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)),
+                url("https://cdn.autobild.es/sites/navi.axelspringer.es/public/media/image/2023/01/nuevos-coches-policia-2928690.jpg") center/cover no-repeat;
+        
+        }
+
+
+           a:visited{
+            color:white;
+           }
+           a:link{
+            color:white;
+           }
+           a{
+            text-decoration:none;
+           }
+           
+
+
+            .incidencias{
+                margin-top:80px;
+                text-align: center;
+                font-size: x-large;
+                height:70vh;
+            }
+            .incidencias h1{
+                color:white;
+            }
+            .incidencias p{
+                color:white;
+                font-size:small;
+            }
+
+            
+
+
+.anotar {
+ display: inline-block;
+ border-radius: 4px;
+ background-color: rgb(18, 18, 18);
+ border: none;
+ color: #FFFFFF;
+ text-align: center;
+ font-size: 17px;
+ padding: 16px;
+ width: 130px;
+ transition: all 0.5s;
+ cursor: pointer;
+ margin: 5px;
+}
+
+button span {
+ cursor: pointer;
+ display: inline-block;
+ position: relative;
+ transition: 0.5s;
+}
+
+button span:after {
+ content: '»';
+ position: absolute;
+ opacity: 0;
+ top: 0;
+ right: -15px;
+ transition: 0.5s;
+}
+
+button:hover span {
+ padding-right: 15px;
+}
+
+button:hover span:after {
+ opacity: 1;
+ right: 0;
+}

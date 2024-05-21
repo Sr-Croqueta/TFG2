@@ -1,0 +1,15 @@
+<div class="modal-container">
+    <div class="modal-content">
+      <h1 class="modal-title">Detalles del anuncio</h1>
+      <div class="modal-body">
+        <p><strong>Título:</strong> {{ data.titulo }}</p>
+        <p><strong>Descripción:</strong> {{ data.cuerpo }}</p>
+        <p><strong>Caducidad:</strong> {{ data.caduca }}</p>
+        <p><strong>Datos Adjuntos:</strong> {{data.datos_adjuntos}}</p>
+      </div>
+      <div class="modal-footer">
+        <button class="modal-button" (click)="close()">Cerrar</button>
+      </div>
+    </div>
+  </div>
+  

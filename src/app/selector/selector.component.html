@@ -1,0 +1,57 @@
+<div class="content-header">
+  <div class="container-fluid">
+    <div class="row mb-2">
+      <div class="col-sm-6">
+        <h1 class="m-0">Gestion de Aulas</h1>
+      </div><!-- /.col -->
+      <div class="col-sm-6">
+        <ol class="breadcrumb float-sm-right">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item active">Aplicaciones</li>
+          <li class="breadcrumb-item active">Gestión de Aulas</li>
+        </ol>
+      </div><!-- /.col -->
+    </div><!-- /.row -->
+  </div><!-- /.container-fluid -->
+</div>
+
+<form (ngSubmit)="onSubmit()" *ngIf="shouldReloadNgFor">
+  <div class="fondo">
+    <div class="selector">
+      <div class="n">
+        <p>Selecciona el centro deseado</p>
+        <select class="custom-select" [(ngModel)]="centroSeleccionado" name="centro" required>
+          <!-- Usando *ngFor para iterar sobre los elementos de centr -->
+          <option *ngFor="let centro of centr" [value]="centro.id">{{ centro.nombre }}</option>
+        </select>
+      </div>
+      <div class="n">
+        <p>Selecciona una hora</p>
+        <select class="custom-select" [(ngModel)]="horaSeleccionada" name="hora" required>
+          <!-- Usando *ngFor para iterar sobre los elementos de horas -->
+          <option *ngFor="let hora of horas" [value]="hora">{{ hora }}:00</option>
+        </select>
+      </div>
+      <div class="n">
+        <p>Selecciona un día</p>
+        <select class="custom-select" [(ngModel)]="fechaSeleccionada" name="fecha" required>
+          <!-- Usando *ngFor para iterar sobre los elementos de dias -->
+          <option *ngFor="let dia of dias" [value]="dia">{{ dia}}</option>
+        </select>
+      </div>
+
+      <button type="submit" style="--clr: #7808d0" class="button" href="#">
+        <span class="button__icon-wrapper">
+            <svg width="10" class="button__icon-svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 15">
+                <path fill="currentColor" d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"></path>
+            </svg>
+            
+            <svg class="button__icon-svg  button__icon-svg--copy" xmlns="http://www.w3.org/2000/svg" width="10" fill="none" viewBox="0 0 14 15">
+                <path fill="currentColor" d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"></path>
+            </svg>
+        </span>
+        Explore All
+      </button>
+    </div>
+  </div>
+</form>

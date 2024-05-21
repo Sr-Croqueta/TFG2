@@ -1,0 +1,131 @@
+<div class="content-header">
+  <div class="container-fluid">
+    <div class="row mb-2">
+      <div class="col-sm-6">
+        <h1 class="m-0">Encuentra a tu manicurista ideal</h1>
+      </div><!-- /.col -->
+      <div class="col-sm-6">
+        <ol class="breadcrumb float-sm-right">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item active">Tiendas</li>
+        </ol>
+      </div><!-- /.col -->
+    </div><!-- /.row -->
+  </div><!-- /.container-fluid -->
+</div>
+
+
+
+<div class="anuncios-container" >
+<div class="añadir">
+  <form class="buscar" (submit)="buscarTienda()">
+    <input class="bus" type="text" placeholder="Buscar por ciudad" [(ngModel)]="nombreBusqueda" name="nombreBusqueda">
+    <button type="submit"> <i  class="nav-icon fas fa-search" style="color:#ffffff; background-color: black;"></i></button>
+  </form>
+  <a  routerLink="/CrearEnlace"><p class="botonañadir">añadir&nbsp;&nbsp;<i class="nav-icon fas fa-plus" style="color:white;background-color:#343a40;"></i></p></a>
+</div>
+<table class="anuncios-table">
+<thead>
+  <tr>
+    <th>Nombre</th>
+    <th>Direccion</th>
+    <th>Telefono</th>
+    <th>Descripcion</th>
+    <th>Ciudad</th>
+    <th>actions</th>
+  </tr>
+</thead>
+<tbody>
+  <ng-container *ngIf="shouldReloadNgFor">
+    <ng-container *ngFor="let anuncio of tiendas.slice(cont - 1, cont - 1 + limit)">
+      <tr>
+        <td>{{anuncio.nombre}}</td>
+        <td>{{anuncio.direccion}}</td>
+        <td>{{anuncio.telefono}}</td>
+        <td>{{anuncio.descripcion}}</td>
+        <td>{{anuncio.ciudad}}</td>
+        <td class="actions">
+          <a  [routerLink]="['/Disponibles']" [queryParams]="{id:anuncio.id_user}"><i class="nav-icon fas fa-pen" style="color:#343a40;"></i></a>
+        </td>
+      </tr>
+    </ng-container>
+  </ng-container>
+</tbody>
+</table>
+
+
+  <div class="pagina" >
+      <button class="button1" (click)="paginacion('<')" *ngIf="page != 1">
+          <div class="button-box1">
+              <span class="button-elem1">
+                  <svg viewBox="0 0 46 40" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                          d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z"
+                      ></path>
+                  </svg>
+              </span>
+              <span class="button-elem1">
+                  <svg viewBox="0 0 46 40">
+                      <path
+                          d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z"
+                      ></path>
+                  </svg>
+              </span>
+          </div>
+      </button>
+
+      
+      
+      <p>{{ page }}</p>
+      
+      <button class="button" (click)="paginacion('>')" *ngIf="page != totalPages && totalPages>1">
+                  <div class="button-box">
+                  <span class="button-elem">
+                      <svg viewBox="0 0 46 40" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                          d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z"
+                      ></path>
+                      </svg>
+                  </span>
+                  <span class="button-elem">
+                      <svg viewBox="0 0 46 40">
+                      <path
+                          d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z"
+                      ></path>
+                      </svg>
+                  </span>
+                  </div>
+              </button>
+      
+      
+  </div>
+
+
+  <div class="resultados-busqueda">
+      <div class="salir"><i (click)="cerrarbusq()" class="nav-icon fas fa-chevron-left" style="size: 20px; color: red;"></i></div>
+      <table class="anuncios-table">
+        <thead>
+          <tr>
+              <th>Nombre</th>
+              <th>Direccion</th>
+              <th>Telefono</th>
+              <th>Descripcion</th>
+              <th>Ciudad</th>
+          </tr>
+        </thead>
+        <tbody>
+          <ng-container *ngIf="shouldReloadNgFor">
+            <ng-container *ngFor="let anuncio of resulbusqueda.slice(cont - 1, cont - 1 + limit)">
+              <tr>
+                  <td>{{anuncio.nombre}}</td>
+                  <td>{{anuncio.direccion}}</td>
+                  <td>{{anuncio.telefono}}</td>
+                  <td>{{anuncio.descripcion}}</td>
+                  <td>{{anuncio.ciudad}}</td>
+              </tr>
+            </ng-container>
+          </ng-container>
+        </tbody>
+        </table>
+    </div>
+  </div>

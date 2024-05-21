@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulario de Notas</title>
+</head>
+<body>
+   
+
+    <div class="container" *ngIf="shouldReloadNgFor">
+        <form (ngSubmit)="guardarTienda()">
+          <h2>Registra tu Tienda</h2><br>
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" [(ngModel)]="nombre" name="nombre" required>
+      
+          <label for="direccion">Dirección:</label>
+          <input type="text" id="direccion" [(ngModel)]="direccion" name="direccion" required>
+      
+        
+          <label for="telefono">Telefono:</label>
+          <input type="text" id="telefono" [(ngModel)]="telefono" name="telefono" required>
+
+          <label for="descripcion">Descripcion:</label>
+          <textarea id="descripcion" [(ngModel)]="descripcion" name="descripcion"></textarea>
+
+          <label for="ciudad">Ciudad:</label>
+          <input type="text" id="ciudad" [(ngModel)]="ciudad" name="ciudad" required>
+
+          <br>
+      
+          <button type="submit">Guardar Tienda</button>
+        </form>
+      </div>
+
+</body>
+</html>

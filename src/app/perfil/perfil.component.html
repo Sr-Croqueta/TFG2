@@ -1,0 +1,26 @@
+<a style="color:#343a40" routerLink="/CrearUsuario"><p class="botonañadir">añadir&nbsp;&nbsp;<i class="nav-icon fas fa-plus" style="color:white;background-color:#343a40;"></i></p></a>
+<table class="user-table">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Nombre</th>
+        <th>Email</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngIf="shouldReloadNgFor">
+        <ng-container *ngFor="let usr of user" class="n">
+          <tr class="fila">
+            <td>{{ usr.id }}</td>
+            <td>{{ usr.name }}</td>
+            <td>{{ usr.email }}</td>
+            <td class="actions">
+              <a [routerLink]="['/CrearUsuario']" [queryParams]="{ id: usr.id }"><i class="nav-icon fas fa-pen" style="color:#343a40;"></i></a>
+              <i (click)="borrarusuario(usr.id)" class="nav-icon fas fa-trash" style="color:#343a40;"></i>
+            </td>
+          </tr>
+        </ng-container>
+      </ng-container>
+    </tbody>
+  </table>

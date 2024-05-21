@@ -1,0 +1,23 @@
+<div class="modal-container">
+    <div class="modal-content">
+      <h1 class="modal-title">Detalles del Contacto</h1>
+      <div class="modal-body">
+        <p><strong>Nombre:</strong> {{ data.Nombre }}</p>
+        <p><strong>Apellidos:</strong> {{ data.Apellidos }}</p>
+        <p><strong>CentroMedico:</strong> {{ data.CentroMedico }}</p>
+        <p><strong>Nº Telefono:</strong> {{data.NTelefono}}</p>
+        <p><strong>Correo:</strong> {{data.CorreoElectronico}}</p>
+        <p><strong>Puesto de Trabajo:</strong> {{data.PuestoTrabajo}}</p>
+        <p><strong>Ciudad:</strong> {{data.Ciudad}}</p>
+        <p><strong>Provincia:</strong> {{data.Provincia}}</p>
+        <p><strong>País:</strong> {{data.Pais}}</p>
+        <p><strong>Código Postal:</strong> {{data.CodigoPostal}}</p>
+       
+      </div>
+      <div class="modal-footer">
+        <button class="modal-button" (click)="close()">Cerrar</button>
+      </div>
+    </div>
+  </div>
+  
+

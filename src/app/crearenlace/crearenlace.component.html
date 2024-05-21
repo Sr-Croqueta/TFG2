@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulario de Notas</title>
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: Arial, sans-serif;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    form {
+        width: 80%;
+        max-width: 500px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        background-color: #f9f9f9;
+    }
+
+    input[type="text"], textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 15px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+</style>
+</head>
+<body>
+
+    <div class="container" *ngIf="shouldReloadNgFor">
+        <h2>{{ modo === 'crear' ? 'Crear Enlace' : 'Editar Enlace' }}</h2>
+        <form (ngSubmit)="modo === 'crear' ? guardarEnlace() : editarEnlaceExistente()">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" [(ngModel)]="nombre" name="nombre" required>
+      
+          <label for="direccion">Dirección:</label>
+          <input type="text" id="direccion" [(ngModel)]="direccion" name="direccion" required>
+      
+          <label for="notas">Notas:</label>
+          <textarea id="notas" [(ngModel)]="notas" name="notas"></textarea>
+      
+          <button type="submit">{{ modo === 'crear' ? 'Guardar' : 'Editar' }}</button>
+        </form>
+      </div>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinea los elementos en la parte superior */
+    height: 100vh; /* Asegura que el contenedor ocupe toda la altura de la pantalla */
+    padding-top: 90px; /* Añade espacio en la parte superior para mover el contenido hacia abajo */
+}
+  
+  button {
+    background-color: #4CAF50; /* Color de fondo verde */
+    color: white; /* Color del texto blanco */
+    padding: 10px 20px; /* Añade espacio interno a los botones */
+    border: none; /* Quita el borde de los botones */
+    border-radius: 5px; /* Añade bordes redondeados a los botones */
+    cursor: pointer; /* Cambia el cursor al pasar sobre los botones */
+    margin-left: 10px; /* Añade espacio entre los botones */
+    margin-top: 500px;
+  }
+  
+  button:hover {
+    background-color: #45a049; /* Cambia el color de fondo al pasar sobre los botones */
+  }
+  

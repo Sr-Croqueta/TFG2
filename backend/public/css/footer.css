@@ -1,0 +1,28 @@
+.footer{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background-color:rgb(18, 18, 18);
+    color: white;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left:0
+    }
+    .footer h1{
+     margin-left: 20px;
+     font-size:large;
+     color: white;
+    }
+    .footer h2{
+      margin-right: 20px;
+      color: white;
+    }
+    .footer p{
+        margin-left:-160px
+    }
+
+    .footer h2 img{
+      width:30px;
+      height:30px
+    }
