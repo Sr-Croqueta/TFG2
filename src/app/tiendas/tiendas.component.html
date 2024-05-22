@@ -1,3 +1,4 @@
+<script src="https://kit.fontawesome.com/3f78347b9b.js" crossorigin="anonymous"></script>
 <div class="content-header">
   <div class="container-fluid">
     <div class="row mb-2">
@@ -22,7 +23,6 @@
     <input class="bus" type="text" placeholder="Buscar por ciudad" [(ngModel)]="nombreBusqueda" name="nombreBusqueda">
     <button type="submit"> <i  class="nav-icon fas fa-search" style="color:#ffffff; background-color: black;"></i></button>
   </form>
-  <a  routerLink="/CrearEnlace"><p class="botonañadir">añadir&nbsp;&nbsp;<i class="nav-icon fas fa-plus" style="color:white;background-color:#343a40;"></i></p></a>
 </div>
 <table class="anuncios-table">
 <thead>
@@ -45,7 +45,8 @@
         <td>{{anuncio.descripcion}}</td>
         <td>{{anuncio.ciudad}}</td>
         <td class="actions">
-          <a  [routerLink]="['/Disponibles']" [queryParams]="{id:anuncio.id_user}"><i class="nav-icon fas fa-pen" style="color:#343a40;"></i></a>
+          <a  [routerLink]="['/Disponibles']" [queryParams]="{id:anuncio.id_user}"><i class="nav-icon	far fa-images" style="color:#343a40;"></i></a>
+          <a  [routerLink]="['/DiseñoCliente']" [queryParams]="{id:anuncio.id_user}"><i class="nav-icon fas fa-cloud-upload-alt" style="color:#343a40;"></i></a>
         </td>
       </tr>
     </ng-container>

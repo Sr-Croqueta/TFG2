@@ -1,0 +1,27 @@
+<table class="user-table">
+    <thead>
+        <tr>
+            <th>Nombre del Creador</th>
+            <th>Nombre del Diseño</th>
+            <th>Email del Cliente</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <ng-container *ngFor="let pedido of pedidos">
+            <tr class="fila">
+                <td>{{ pedido.diseno.creado_por }}</td>
+                <td>{{ pedido.diseno.nombre }}</td>
+                <td>{{ pedido.cliente.email }}</td>
+                <td>
+                    <button>
+                        <a [href]="'http://127.0.0.1:8000/' + pedido.diseno.ruta_archivo" download>
+                            Visualizar Diseño
+                        </a>
+                    </button>
+                </td>
+            </tr>
+        </ng-container>
+    </tbody>
+</table>
+

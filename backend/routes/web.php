@@ -70,6 +70,8 @@ Route::post('/creartienda', [TiendasController::class, 'store'])->name('tiendas.
 //Diseños
 Route::post('/creardiseño', [DisenosController::class, 'store'])->name('diseños.store');
 Route::get('/disenoma/{id}', [DisenosController::class, 'disponibles'])->name('diseños.disponibles');
+Route::get('/disenocli/{id}', [DisenosController::class, 'obtenerDisenos'])->name('diseños.obtenerDisenos');
+Route::post('/creardiseñocli/{id}', [DisenosController::class, 'guardar'])->name('diseños.guardar');
 
 //enlaces
 Route::get('/enlaces', [EnlaceController::class, 'index'])->name('enlaces.index');

@@ -68,5 +68,13 @@ export class IntranetService {
   obtenerdisenoma(id: any) {
     return this.http.get<any[]>("http://127.0.0.1:8000/disenoma/"+id);
   }
+  guardarDiseñocli(diseño: any,id:any) {
+    
+    return this.http.post<any>("http://127.0.0.1:8000/creardiseñocli/"+id, diseño);
+
+  }
+  obtenerdisenocli(id: any) {
+    return this.http.get<any[]>("http://127.0.0.1:8000/disenocli/"+id);
+  }
 
 }

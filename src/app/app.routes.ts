@@ -16,6 +16,8 @@ import{CanvasComponent} from './canvas/canvas.component';
 import { RegistrotiendaComponent } from './registrotienda/registrotienda.component';
 import { DisenomaniComponent } from './disenomani/disenomani.component';
 import { DisponiblesComponent } from './disponibles/disponibles.component';
+import { DisenocliComponent } from './disenocli/disenocli.component';
+import { EncargosComponent } from './encargos/encargos.component';
 export const routes: Routes = [ 
     {path: "",redirectTo:"Tiendas", pathMatch:"full"},
     {path:"Seleccion",component:SelectorComponent},
@@ -35,6 +37,8 @@ export const routes: Routes = [
     {path:"RegistroTienda", component:RegistrotiendaComponent},
     {path:"DiseñoManicurista", component:DisenomaniComponent},
     {path:"Disponibles", component:DisponiblesComponent},
+    {path:"DiseñoCliente", component:DisenocliComponent},
+    {path:"Encargos", component:EncargosComponent},
 
 
 

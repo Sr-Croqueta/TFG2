@@ -33,6 +33,8 @@ class VerifyCsrfToken extends Middleware
         'creartienda',
         'creardiseño',
         'disenoma/*',
+        'creardiseñocli/*',
+        'disenocli/*',
         
         
     ];
